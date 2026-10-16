@@ -132,7 +132,115 @@ ul li{
     height: auto;
 }
 
+.main-section {
+    padding: 1.5rem;
+}
 
+.name,
+.product-description {
+    font-size: .9rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.name {
+    margin: 0;
+    letter-spacing: .1rem;
+    font-weight: 700;
+}
+
+h1 {
+    margin-top: .7rem;
+    margin-bottom: 0;
+    color: var(--Very-dark-blue);
+    line-height: 1;
+}
+
+.product-description {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.price {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.price-discount {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price h2 {
+    color: var(--Very-dark-blue);
+}
+
+.discount {
+    background-color: var(--Very-dark-blue);
+    color: var(--White);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.init-price {
+    justify-self: right;
+    text-decoration: line-through;
+    font-weight: 700;
+    color: var(--Dark-grayish-blue)
+}
+
+.price h2,
+.price p {
+    margin: 0;
+}
+
+.counter {
+    background-color: var(--Light-grayish-blue);
+    padding: 1rem;
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+img[alt="Plus Icon"] {
+    justify-self: right;
+}
+
+input[type="text"] {
+    text-align: center;
+    border: none;
+    color: var(--Black);
+    background-color: var(--Light-grayish-blue);
+    font-weight: 700;
+    outline: none;
+}
+
+#submit-btn {
+    border: none;
+    background-color: var(--Orange);
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 4px 12px var(--Orange);
+}
 
 
 .attribution { 
