@@ -46,8 +46,25 @@ img[alt="avatar image"] {
     width: 1.5rem;
 }
 
+.cart-icon {
+    position: relative;
+}
+
+.cart-num {
+    display: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-size: .5rem;
+    font-weight: 700;
+    padding: 0 .3rem;
+    border-radius: 40%;
+    position: absolute;
+    left: 11px;
+    bottom: 17px;
+}
+
 img[alt="Menu Icon"],
-img[alt="Cart Icon"] {
+.cart-icon {
     margin-right: 1rem;
 }
 
