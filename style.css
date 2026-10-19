@@ -14,6 +14,7 @@
     /* primary */
     --Orange: hsl(26, 100%, 55%);
     --Pale-orange: hsl(25, 100%, 94%);
+    --Light-orange: hsla(26, 100%, 55%, 0.75);
 
     /* Neutral */
     --Very-dark-blue: hsl(220, 13%, 13%);
@@ -41,9 +42,18 @@ img[alt="Menu Icon"] {
     height: 1rem;
 }
 
+.avatar-img {
+    height: 1.52rem;
+    width: 1.52rem;
+    overflow: hidden;
+    border-radius: 50%;
+    /* border: 1px solid var(--Orange); */
+}
+
 img[alt="avatar image"] {
     height: 1.5rem;
     width: 1.5rem;
+    object-fit: cover;
 }
 
 .cart-icon {
@@ -232,7 +242,7 @@ label {
     width: 100%;
 }
 
-img[alt="Plus Icon"] {
+.plus-icon {
     justify-self: right;
 }
 
@@ -382,4 +392,35 @@ input[type="text"] {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* acitve and hover states */
+
+img[alt="avatar image"],
+img[alt="Menu Icon"],
+img[alt="Close Icon"],
+.cart-icon,
+.change-icon {
+    cursor: pointer;
+}
+
+.avatar-img:hover {
+    border: 1px solid var(--Orange);
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: var(--Light-black);
+}
+
+#a:hover, #b:hover {
+    cursor: pointer;
+    fill: var(--Light-orange);
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    background-color: var(--Light-orange);
+    color: var(--Light-black);
+    fill: var(--Light-black);
 }
