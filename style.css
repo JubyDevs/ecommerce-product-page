@@ -127,7 +127,7 @@ ul li{
     font-weight: 700;
 }
 
-.main-img-section {
+.slide-show {
     position: relative;
 }
 
@@ -156,12 +156,29 @@ ul li{
     height: .8rem;
 }
 
-.first-product-img {
+.slide-wrapper {
+    position: relative;
     height: 20rem;
     overflow: hidden;
 }
 
-.first-product-img img {
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    height: 20rem;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide.slide-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide img {
     width: 100%;
     height: auto;
 }
@@ -409,6 +426,14 @@ img[alt="Close Icon"],
 .cart-icon,
 .change-icon {
     cursor: pointer;
+}
+
+.change-icon:hover {
+    background-color: var(--Pale-orange);
+}
+
+.change-icon:active {
+    background-color: var(--Grayish-blue);
 }
 
 .avatar-img:hover {
