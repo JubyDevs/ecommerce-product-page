@@ -257,16 +257,19 @@ h1 {
     padding: 1rem;
     border-radius: .8rem;
     margin-bottom: 1rem;
-}
-
-label {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 10fr 1fr;
+    /* align-items: center; */
     width: 100%;
 }
 
-.plus-icon {
+#minusIcon,
+#plusIcon {
+    display: flex;
+    align-items: center;
+}
+
+#plusIcon {
     justify-self: right;
 }
 

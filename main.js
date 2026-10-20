@@ -5,6 +5,9 @@ const background = document.querySelector (".background");
 const slides = document.querySelectorAll (".slide");
 const prevBtn = document.getElementById ("prevBtn");
 const nextBtn = document.getElementById ("nextBtn");
+const minus = document.getElementById ("minusIcon");
+const plus = document.getElementById ("plusIcon");
+let count = document.getElementById ("count");
 
 
 
@@ -52,3 +55,21 @@ prevBtn.addEventListener('click', () => {
 
     showSlide(currentIndex);
 });
+
+// count funtionality
+count.value = 0;
+
+minus.addEventListener ('click', () => {
+
+    if (count.value == 0) {
+        count.value = 0;
+    } else  {
+        count.value--;
+    };
+});
+
+plus.addEventListener ('click', () => {
+    count.value++;
+})
+
+
