@@ -73,6 +73,10 @@ img[alt="avatar image"] {
     bottom: 17px;
 }
 
+.cart-num.active {
+    display: block;
+}
+
 img[alt="Menu Icon"],
 .cart-icon {
     margin-right: 1rem;
@@ -282,7 +286,8 @@ input[type="text"] {
     outline: none;
 }
 
-#submit-btn {
+#submit-btn,
+#checkOutBtn {
     border: none;
     background-color: var(--Orange);
     width: 100%;
@@ -329,9 +334,8 @@ input[type="text"] {
 /* empty cart styles */
 
 .cart-empty {
-    display: none;
+    /* display: none; */
     padding: 5rem 0;
-    border: 1px solid;
 }
 
 .cart-empty p {
@@ -393,19 +397,11 @@ input[type="text"] {
     align-self: right;
 }
 
-#checkOutBtn {
-    border: none;
-    width: 100%;
-    background-color: var(--Orange);
-    color: var(--Black);
-    font-weight: 700;
-    border-radius: .5rem;
-    padding: 1rem;
-}
 
 /* show cart */
 
-.cart.show,
+
+.cart-num.show,
 .cart-empty.show,
 .cart-filled.show {
     display: block;
@@ -427,7 +423,8 @@ img[alt="avatar image"],
 img[alt="Menu Icon"],
 img[alt="Close Icon"],
 .cart-icon,
-.change-icon {
+.change-icon,
+.delete-icon {
     cursor: pointer;
 }
 
@@ -453,7 +450,8 @@ ul li:hover {
     fill: var(--Light-orange);
 }
 
-#submit-btn:hover {
+#submit-btn:hover,
+#checkOutBtn:hover {
     cursor: pointer;
     background-color: var(--Light-orange);
     color: var(--Light-black);
