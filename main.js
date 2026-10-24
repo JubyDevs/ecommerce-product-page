@@ -15,8 +15,9 @@ const prevBtn = document.getElementById ("prevBtn");
 const nextBtn = document.getElementById ("nextBtn");
 const minus = document.getElementById ("minusIcon");
 const plus = document.getElementById ("plusIcon");
+const thumbs = document.querySelectorAll (".thumbnail");
+const thumbImg = document.querySelectorAll (".thumb");
 let count = document.getElementById ("count");
-let isEmpty = true;
 
 
 
@@ -35,6 +36,8 @@ menuIcon.addEventListener ('click', () => {
 });
 
 //Cart Functionaality
+
+let isEmpty = true;
 
 cartIcon.addEventListener ('click', () => {
 
@@ -118,3 +121,12 @@ form.addEventListener ("submit", e => {
 
 })
 
+
+// thumbnail Funtionality
+
+thumbs.forEach (thumb => {
+    thumb.addEventListener ('click', () => {
+        thumbs.forEach ( t=> t.classList.remove ('active'));
+        thumb.classList.add('active');
+    })
+})

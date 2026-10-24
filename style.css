@@ -583,7 +583,6 @@ ul li:hover {
     }
 
     header {
-        /* border: 2px solid red; */
         margin: 0;
         padding: 0;
     }
@@ -613,6 +612,7 @@ ul li:hover {
     }
 
     .thumbnails {
+        margin: 10rem 0;
         display: flex;
         gap: 1rem;
     }
@@ -622,12 +622,13 @@ ul li:hover {
         line-height: 0;
         overflow: hidden;
         border-radius: .5rem;
-        /* border: 2px solid var(--Orange); */
+        border: 3px solid transparent;
     }
 
     .thumbnail img {
         width: 100%;
         height: auto;
+        cursor: pointer;
     }
 
     .main-section {
@@ -713,6 +714,17 @@ ul li:hover {
     }
 
     /* active states */
+    .thumbnail img:hover {
+        opacity: .5;
+    }
+
+    .thumbnail.active {
+        border-color: var(--Orange);
+    }
+
+    .thumbnail.active img {
+        opacity: .6;
+    }
 
     ul li:hover {
         cursor: pointer;
