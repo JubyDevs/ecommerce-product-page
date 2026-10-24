@@ -613,6 +613,10 @@ ul li:hover {
         margin-bottom:  2rem;
     }
 
+    #mainImg {
+        transition: opacity 0.3s ease;
+    }
+
     .main-image img {
         width: 100%;
         height: auto;
@@ -630,18 +634,19 @@ ul li:hover {
         overflow: hidden;
         border-radius: .5rem;
         border: 3px solid transparent;
+
     }
 
     .thumbnail img {
         width: 100%;
         height: auto;
         cursor: pointer;
+        opacity: 1;
+        transition: opacity .3s ease;
     }
 
     .main-section {
         padding: 5rem 0;
-        /* display: grid;
-        place-content: center; */
     }
 
     h1 {
@@ -685,9 +690,9 @@ ul li:hover {
     }
 
     .cart {
-        max-width: 25%;
+        max-width: 29%;
         max-height: 16rem;
-        inset: 7rem 0 0 65rem;
+        inset: 7rem 0 0 62rem;
         box-shadow: 0px 15px 40px -9px rgba(0,0,0,0.5);
         margin-right: 2rem;
     }
@@ -720,7 +725,7 @@ ul li:hover {
     }
 
     .cart-filled h4 {
-        font-size: .86rem;
+        font-size: .9rem;
     }
 
     .cart-num {

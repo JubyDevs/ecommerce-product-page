@@ -17,6 +17,7 @@ const minus = document.getElementById ("minusIcon");
 const plus = document.getElementById ("plusIcon");
 const thumbs = document.querySelectorAll (".thumbnail");
 const thumbImg = document.querySelectorAll (".thumb");
+const mainImg = document.getElementById ("mainImg");
 let count = document.getElementById ("count");
 
 
@@ -119,14 +120,22 @@ form.addEventListener ("submit", e => {
     cartNum.classList.add ('show');
     isEmpty = false;
 
-})
+});
 
 
 // thumbnail Funtionality
 
 thumbs.forEach (thumb => {
     thumb.addEventListener ('click', () => {
+
         thumbs.forEach ( t=> t.classList.remove ('active'));
         thumb.classList.add('active');
-    })
-})
+
+        mainImg.style.opacity = "0";
+
+        setTimeout(() => {
+            mainImg.src = thumb.dataset.large;
+            mainImg.style.opacity = '1';
+        }, 150);
+    });
+});
