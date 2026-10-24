@@ -136,6 +136,10 @@ hr {
     display: none;
 }
 
+.main-image {
+    display: none;
+}
+
 .slide-show {
     position: relative;
 }
@@ -596,24 +600,26 @@ ul li:hover {
         height: 25.6rem;
         margin-bottom: 2rem;
         overflow: hidden;
-    }
-
-    .slide {
-        height: auto;
-    }
-
-    .slide img {
-        border-radius: 1rem;
-        width: 100%;
-        height: auto;
+        display: none;
     }
 
     .change-icon {
         display: none;
     }
 
+    .main-image {
+        display: block;
+        overflow: hidden;
+        margin-bottom:  2rem;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
     .thumbnails {
-        margin: 10rem 0 0 0;
         display: flex;
         gap: 1rem;
     }
