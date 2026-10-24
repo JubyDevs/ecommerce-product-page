@@ -3,11 +3,11 @@
 }
 
 @font-face {
-  font-family: "Kumbh Sans";
-  src: url("./asset/KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Kumbh Sans";
+    src: url("./asset/KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
@@ -132,7 +132,7 @@ ul li{
     font-weight: 700;
 }
 
-hr { 
+hr {
     display: none;
 }
 
@@ -193,11 +193,6 @@ hr {
 .slide.slide-active {
     opacity: 1;
     pointer-events: auto;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
 }
 
 .thumbnail {
@@ -381,7 +376,7 @@ input[type="text"] {
     height: 4rem;
     border-radius: .5rem;
     overflow: hidden;
-    
+
 }
 
 .cart-product-img img {
@@ -415,9 +410,7 @@ input[type="text"] {
     align-self: right;
 }
 
-
 /* show cart */
-
 
 .cart-num.show,
 .cart-empty.show,
@@ -427,14 +420,14 @@ input[type="text"] {
 
 /* footer */
 
-.attribution { 
-    font-size: 0.6875rem; 
-    text-align: center; 
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
     margin-top: 1rem;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 /* acitve and hover states */
@@ -499,7 +492,6 @@ ul li:hover {
         /* justify-content: center; */
     }
 
-
     header {
         margin: 2rem 0;
         padding: 1rem 0;
@@ -548,7 +540,7 @@ ul li:hover {
         display: block;
         color: var(--Light-black);
         opacity: .5;
-    } 
+    }
 
     .avatar-img {
         height: 3.2rem;
