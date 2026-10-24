@@ -595,6 +595,7 @@ ul li:hover {
         position: static;
         height: 25.6rem;
         margin-bottom: 2rem;
+        overflow: hidden;
     }
 
     .slide {
@@ -612,7 +613,7 @@ ul li:hover {
     }
 
     .thumbnails {
-        margin: 10rem 0;
+        margin: 10rem 0 0 0;
         display: flex;
         gap: 1rem;
     }
@@ -632,15 +633,17 @@ ul li:hover {
     }
 
     .main-section {
-        display: grid;
-        place-content: center;
+        padding: 5rem 0;
+        /* display: grid;
+        place-content: center; */
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .product-description {
+        font-size: 1.2rem;
         margin-top: 2rem;
         line-height: 1.6;
     }
@@ -676,10 +679,11 @@ ul li:hover {
     }
 
     .cart {
-        max-width: 27%;
+        max-width: 25%;
         max-height: 16rem;
-        inset: 7rem 0 0 52rem;
+        inset: 7rem 0 0 65rem;
         box-shadow: 0px 15px 40px -9px rgba(0,0,0,0.5);
+        margin-right: 2rem;
     }
 
     .cart hr {
@@ -711,6 +715,12 @@ ul li:hover {
 
     .cart-filled h4 {
         font-size: .86rem;
+    }
+
+    .cart-num {
+        text-align: center;
+        top: 0;
+        right: 0;
     }
 
     /* active states */
