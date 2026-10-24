@@ -18,6 +18,7 @@ const plus = document.getElementById ("plusIcon");
 const thumbs = document.querySelectorAll (".thumbnail");
 const thumbImg = document.querySelectorAll (".thumb");
 const mainImg = document.getElementById ("mainImg");
+const checkOutBtn = document.getElementById ("checkOutBtn");
 let count = document.getElementById ("count");
 
 
@@ -113,12 +114,23 @@ function calculate (count) {
 form.addEventListener ("submit", e => {
     e.preventDefault();
 
-    cartNum.textContent = count.value;
-    itemNum.textContent = count.value;
-    calculate(count.value);
-    totalPrice.textContent = total;
-    cartNum.classList.add ('show');
-    isEmpty = false;
+    if (count.value == 0) {
+        cartNum.classList.remove ('show');
+        cartEmpty.style.display = 'block';
+        return;
+    } else {
+        cartNum.textContent = count.value;
+        itemNum.textContent = count.value;
+        calculate(count.value);
+        totalPrice.textContent = total;
+        cartNum.classList.add ('show');
+        isEmpty = false;
+    }
+
+    checkOutBtn.addEventListener ('click', () => {
+        cart.style.display = 'none';
+        cartNum.classList.remove ('show');
+    })
 
 });
 
@@ -139,3 +151,6 @@ thumbs.forEach (thumb => {
         }, 150);
     });
 });
+
+
+

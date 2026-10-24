@@ -345,6 +345,7 @@ input[type="text"] {
 }
 
 .cart hr {
+    display: block;
     opacity: .1;
 }
 
