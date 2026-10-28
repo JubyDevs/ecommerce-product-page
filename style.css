@@ -33,7 +33,7 @@ body {
 }
 
 header {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -49,10 +49,10 @@ img[alt="Menu Icon"] {
     border-radius: 50%;
 }
 
-img[alt="avatar image"] {
+img[alt="User profile"] {
     height: auto;
     width: 100%;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     border-radius: 50%;
 }
 
@@ -87,6 +87,10 @@ img[alt="Menu Icon"],
 .cart-profile-img {
     display: flex;
     align-items: center;
+}
+
+.menu-logo {
+    gap: 1rem;
 }
 
 .background {
@@ -130,6 +134,11 @@ ul li{
     list-style: none;
     margin-bottom: 1.5rem;
     font-weight: 700;
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit;
 }
 
 hr {
@@ -280,6 +289,7 @@ h1 {
 
 #minusIcon,
 #plusIcon {
+    color: var(--Orange);
     display: flex;
     align-items: center;
     height: 100%;
@@ -289,7 +299,8 @@ h1 {
     justify-self: right;
 }
 
-input[type="text"] {
+input[type="number"] {
+    appearance: textfield;
     text-align: center;
     border: none;
     color: var(--Black);
@@ -486,10 +497,7 @@ ul li:hover {
 @media (min-width: 1024px) {
     body {
         padding: 0 5rem;
-        /* display: flex;
-        flex-direction: column; */
         height: 100vh;
-        /* justify-content: center; */
     }
 
     header {
@@ -745,4 +753,70 @@ ul li:hover {
         border-bottom-color: var(--Light-orange);
     }
 
+}
+
+
+/* Accessibility additions */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Keep icon-only controls usable without changing the existing layout. */
+#menuIcon button,
+#closeIcon button,
+#minusIcon button,
+#plusIcon button,
+.delete-icon button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.cart-icon {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Visible keyboard focus for links, buttons, inputs, and keyboard-operable thumbnails. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.thumbnail[role="button"]:focus-visible {
+    outline: 3px solid var(--Very-dark-blue);
+    outline-offset: 3px;
+}
+
+/* Ensure quantity input remains identifiable when focused. */
+input[type="number"]:focus-visible {
+    outline: 3px solid var(--Very-dark-blue);
+    outline-offset: 2px;
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
