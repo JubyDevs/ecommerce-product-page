@@ -14,11 +14,9 @@
 <header>
   <div class="menu-logo-list">
     <div class="menu-logo">
-      <span id="menuIcon">
-        <button type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+        <button type="button" id="menuIcon" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
           <img src="./images/icon-menu.svg" alt="Menu Icon">
         </button>
-      </span>
 
       <span>
         <img src="./images/logo.svg" alt="Sneakers">
@@ -28,11 +26,11 @@
     <div class="background" aria-hidden="true"></div>
 
     <nav id="primary-navigation" aria-label="Primary navigation">
-      <span id="closeIcon">
-        <button type="button" aria-label="Close navigation menu">
+
+        <button type="button" id="closeIcon" aria-label="Close navigation menu">
           <img src="./images/icon-close.svg" alt="Close Icon">
         </button>
-      </span>
+
       <ul>
         <li><a href="#collections">Collections</a></li>
         <li><a href="#men">Men</a></li>
@@ -124,7 +122,7 @@
 
     <div class="price" aria-label="Price: 125 dollars, discounted from 250 dollars">
       <div class="price-discount">
-        <h2>$125.00</h2>
+        <p class="current-price">$125.00</p>
         <span class="discount">50%</span>
       </div>
       <p class="init-price"><span class="sr-only">Original price: </span>$250.00</p>
@@ -177,15 +175,18 @@
           <div class="cart-product-img">
             <img src="./images/image-product-1-thumbnail.jpg" alt="White sneaker thumbnail">
           </div>
+
           <div class="cart-product-name">
             <h4>Fall Limited Edition Sneakers</h4>
             <p>$125.00 x <span id="itemNum">3</span> <span class="aggr-price">Total: $<span class="total">375</span>.00</span></p>
           </div>
+
           <div class="delete-icon" id="deleteIcon">
             <button type="button" aria-label="Remove sneakers from cart">
               <img src="./images/icon-delete.svg" alt="">
             </button>
           </div>
+
         </div>
         <button type="button" id="checkOutBtn">Checkout</button>
       </div>

@@ -251,7 +251,9 @@ h1 {
     gap: 1rem;
 }
 
-.price h2 {
+.current-price {
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--Very-dark-blue);
 }
 
@@ -272,7 +274,7 @@ h1 {
     color: var(--Dark-grayish-blue)
 }
 
-.price h2,
+.current-price,
 .price p {
     margin: 0;
 }
@@ -604,6 +606,8 @@ ul li:hover {
         display: none;
     }
 
+    #menuIcon,
+    #closeIcon,
     .change-icon {
         display: none;
     }
@@ -667,7 +671,7 @@ ul li:hover {
         gap: .6rem;
     }
 
-    .price h2 {
+    .current-price {
         font-size: 1.5rem;
     }
 
@@ -691,9 +695,11 @@ ul li:hover {
     }
 
     .cart {
-        max-width: 29%;
-        max-height: 16rem;
-        inset: 7rem 0 0 62rem;
+        max-width: none;
+        /* max-height: 16rem; */
+        inset: 7rem 2rem auto auto;
+        margin: 0;
+        width: min(22.5rem, calc(100vw - 4rem) );
         box-shadow: 0px 15px 40px -9px rgba(0,0,0,0.5);
         margin-right: 2rem;
     }
