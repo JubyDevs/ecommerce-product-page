@@ -493,7 +493,7 @@ dialog {
     background: none;
     border: none;
     padding: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     
 }
@@ -582,16 +582,6 @@ dialog button {
     overflow: hidden;
     border-radius: .7rem;
 }
-
-/* .dialog-thumbnail:hover::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:white;
-    z-index: 1;
-    opacity: .7;
-    pointer-events: none;
-} */
 
 .dialog-thumb {
     height: 100%;

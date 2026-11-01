@@ -23,6 +23,12 @@ const checkOutBtn = document.getElementById("checkOutBtn");
 const deleteIcon = document.getElementById("deleteIcon");
 const count = document.getElementById("count");
 const dialog = document.querySelector("dialog");
+const dialogCloseBtn = document.getElementById("dialogCloseBtn");
+const dialogPrevBtn = document.getElementById("dialogPrevBtn");
+const dialogNextBtn = document.getElementById("dialogNextBtn");
+const dialogMainImg = document.getElementById("dialogMainImg");
+const dialogThumbImg = document.querySelectorAll(".dialog-thumbnail");
+const dialogThumbs = document.querySelectorAll (".dialog-thumb");
 
 // Menu Functionality
 
@@ -233,4 +239,54 @@ thumbs.forEach((thumb) => {
 
 // dialog functionality
 
-dialog.showModal();
+function displayDialog (){
+    dialog.style.display = 'flex';
+    dialog.showModal();
+}
+
+function removeDialog () {
+    dialog.style.display = '';
+    dialog.close();
+}
+
+mainImg.addEventListener('click', () => {
+
+    displayDialog();
+
+    dialogCloseBtn.addEventListener ('click', () => {
+        removeDialog();
+    })
+});
+
+
+let dIndex = 0;
+
+function showDialogImg (index) {
+    if (index < 0) index = dialogThumbImg.length - 1;
+    if (index >= dialogThumbs.length) index = 0;
+    
+    dIndex = index;
+
+    dialogMainImg.src = dialogThumbImg[dIndex].dataset.large;
+
+    dialogThumbImg.forEach(d => d.classList.remove ('active'));
+    dialogThumbImg[dIndex].classList.add ('active');
+
+}
+
+dialogThumbImg.forEach((dtl, i) => {
+    dtl.addEventListener('click', () => {
+        showDialogImg(i);
+    });
+});
+
+dialogPrevBtn.addEventListener('click', () => {
+    showDialogImg(dIndex - 1);
+});
+
+dialogNextBtn.addEventListener('click', () => {
+    showDialogImg(dIndex + 1);
+})
+
+
+
