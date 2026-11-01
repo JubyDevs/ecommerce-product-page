@@ -242,21 +242,30 @@ thumbs.forEach((thumb) => {
 function displayDialog (){
     dialog.style.display = 'flex';
     dialog.showModal();
+    document.body.style.overflow = 'hidden';
 }
 
-function removeDialog () {
+function closeDialog () {
     dialog.style.display = '';
     dialog.close();
+    document.body.style.overflow = '';
+
 }
+
+dialog.addEventListener ('close', () => {
+    dialog.style.display = '';
+    document.body.style.overflow = '';
+})
 
 mainImg.addEventListener('click', () => {
 
     displayDialog();
 
     dialogCloseBtn.addEventListener ('click', () => {
-        removeDialog();
+        closeDialog();
     })
 });
+
 
 
 let dIndex = 0;
@@ -289,4 +298,8 @@ dialogNextBtn.addEventListener('click', () => {
 })
 
 
-
+    document.addEventListener('keydown', (e) => {
+        console.log(e.key)
+        if (e.key === 'ArrowLeft') showDialogImg(dIndex - 1);
+        if (e.key === 'ArrowRight') showDialogImg(dIndex + 1);
+    })
