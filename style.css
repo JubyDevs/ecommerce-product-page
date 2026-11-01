@@ -38,7 +38,13 @@ header {
     justify-content: space-between;
 }
 
-img[alt="Menu Icon"] {
+.menu-icon,
+.close-icon {
+    border: none;
+    background: none;
+}
+
+.menu-icon img{
     height: 1rem;
 }
 
@@ -376,7 +382,6 @@ input[type="number"] {
 .cart-filled {
     display: none;
     padding: 1rem;
-
 }
 
 .cart-product-details {
