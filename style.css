@@ -488,6 +488,134 @@ ul li:hover {
     fill: var(--Light-black);
 }
 
+/* dialog style */
+dialog {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+dialog:modal {
+    overflow: visible;
+}
+
+dialog::backdrop {
+    background: var(--Light-black);
+}
+
+dialog button {
+    cursor: pointer;
+    border: none;
+}
+
+.dialog-close-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dialog-close-btn {
+    width: 2rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    color: var(--White);
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.dialog-close-btn svg {
+    width: 100%;
+    height: auto;
+}
+
+.dialog-close-btn svg:hover {
+    color: var(--Orange);
+}
+
+.dialog-main {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.dialog-change-icon {
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.dialog-change-icon:hover {
+    color: var(--Orange);
+}
+
+.left {
+    left: -20px;
+}
+
+.right {
+    right: -20px;
+}
+
+.dialog-main-img img {
+    border-radius: 1rem;
+}
+
+.dialog-main-img {
+    max-width: 35rem;
+}
+
+.dialog-thumbnails {
+    margin: 0 auto;
+}
+
+.dialog-thumbnail {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    border: 3px solid transparent;
+    overflow: hidden;
+    border-radius: .7rem;
+}
+
+/* .dialog-thumbnail:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:white;
+    z-index: 1;
+    opacity: .7;
+    pointer-events: none;
+} */
+
+.dialog-thumb {
+    height: 100%;
+    cursor: pointer;
+}
+
+.dialog-thumbnail.active {
+    border-color: var(--Orange);
+}
+
+.dialog-thumbnail:hover::after,
+.dialog-thumbnail.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--White);
+    z-index: 1;
+    opacity: .65;
+    pointer-events: none;
+}
+
+
+
+
 /* breakpoints */
 
 @media (min-width: 700px) {
@@ -558,6 +686,7 @@ ul li:hover {
         margin-left: 2rem;
     }
 
+    dialog img,
     .avatar-img img {
         width: 100%;
         height: auto;
@@ -696,7 +825,6 @@ ul li:hover {
 
     .cart {
         max-width: none;
-        /* max-height: 16rem; */
         inset: 7rem 2rem auto auto;
         margin: 0;
         width: min(22.5rem, calc(100vw - 4rem) );

@@ -21,7 +21,8 @@ const thumbImg = document.querySelectorAll(".thumb");
 const mainImg = document.getElementById("mainImg");
 const checkOutBtn = document.getElementById("checkOutBtn");
 const deleteIcon = document.getElementById("deleteIcon");
-let count = document.getElementById("count");
+const count = document.getElementById("count");
+const dialog = document.querySelector("dialog");
 
 // Menu Functionality
 
@@ -229,3 +230,7 @@ thumbs.forEach((thumb) => {
         }
     });
 });
+
+// dialog functionality
+
+dialog.showModal();
